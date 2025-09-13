@@ -49,7 +49,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-h2, h3 {
+h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -151,6 +151,43 @@ p {
     width: 555px;
 }
 
+.section-summary {
+    margin-bottom: 19px;
+}
+
 .section-subtitle {
     color: var(--aside-blue);
 }
+
+.summary-text {
+    margin-bottom: 0;
+}
+
+.section-experience-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 555px;
+}
+
+.experience-first-title, .experience-date {
+    margin-bottom: 0;
+    margin-top: 16px;
+}
+
+.experience-date {
+    color: var(--aside-blue);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.experience-second-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-experience-list li {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.3em;
+}
+
