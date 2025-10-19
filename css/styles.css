@@ -21,18 +21,9 @@ body {
 main {
     margin: 0 auto;
     display: flex;
-    width: 900px;
-}
-
-aside {
-    width: 300px;
-    background-color: var(--aside-blue);
-    color: var(--body-background);
-}
-
-section {
-    width: 600px;
-    background-color: white;
+    max-width: 1200px;
+    width: 90%;
+    justify-content: center;
 }
 
 aside, section {
@@ -40,6 +31,19 @@ aside, section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+aside {
+    flex: 1;
+    max-width: 30%;
+    background-color: var(--aside-blue);
+    color: var(--body-background);
+}
+
+section {
+    flex: 2;
+    max-width: 70%;
+    background-color: white;
 }
 
 h1 {
@@ -74,7 +78,7 @@ p {
 /*** ASIDE ***/
 
 .aside-info-container {
-    width: 230px;
+    width: 85%;
 }
 
 .aside-containers {
@@ -86,8 +90,8 @@ p {
 }
 
 .aside-photo {
-    margin-top: 30px;
     display: flex;
+    margin-top: 30px;
 }
 
 #photo-cv {
@@ -133,9 +137,16 @@ p {
     justify-content: space-around;
     align-items: center;
     background-color: var(--cover-background);
-    width: 555px;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.cover,
+.section-summary,
+.section-experience,
+.section-experience-title {
+    width: 100%;
+    max-width: 95%;
 }
 
 .cover-line {
@@ -148,7 +159,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 555px;
 }
 
 .section-summary {
@@ -167,7 +177,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 555px;
 }
 
 .experience-first-title, .experience-date {
