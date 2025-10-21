@@ -1,10 +1,4 @@
-/** ESTILOS GENERALES **/
-
-/**
-main, aside, div, section, h1, h2, h3, ul, li, img {
-    border: 1px solid
-}
-**/
+/******* GENERAL STYLES *******/
 
 :root {
     --aside-blue: #012E58;
@@ -15,7 +9,8 @@ main, aside, div, section, h1, h2, h3, ul, li, img {
 }
 
 body {
-    background-color: var(--body-background);    
+    background-color: var(--body-background);  
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -66,16 +61,12 @@ h2 {
 }
 
 h3 {
-    border-bottom: 2px solid;
+    border-bottom: 2px solid var(--aside-blue);
     padding-bottom: 5px;
     margin-bottom: 0;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
-/*** ASIDE ***/
+/*********** ASIDE ***********/
 
 .aside-info-container {
     width: 85%;
@@ -85,7 +76,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
@@ -96,7 +86,7 @@ p {
 
 #photo-cv {
     width: 125px;
-    border: 2px solid;
+    border: 2px solid var(--body-background);
     border-radius: 8px;
 }
 
@@ -112,12 +102,12 @@ p {
     margin-bottom: 0.3em;
 }
 
-.aside-contact li a {
+.aside-contact a {
     text-decoration: none;
     color: white;
 }
 
-.aside-contact li a:hover {
+.aside-contact a:hover {
     color: var(--links-hover);
 }
 
@@ -129,7 +119,7 @@ p {
     margin-bottom: 0.3em;
 }
 
-/*** SECTION ***/
+/********** SECTION **********/
 
 .cover {
     display: flex;
@@ -145,13 +135,12 @@ p {
 .section-summary,
 .section-experience,
 .section-experience-title {
-    width: 100%;
-    max-width: 95%;
+    width: 95%;
 }
 
 .cover-line {
     width: 150px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--titles-grey);
     margin: 0;
 }
 
@@ -196,7 +185,75 @@ p {
 }
 
 .section-experience-list li {
-    font-family: 'Roboto', sans-serif;
     margin-bottom: 0.3em;
 }
 
+/***** MEDIA QUERY: <= 1080px *****/
+
+@media (max-width: 1080px) {
+    
+    /**** GENERAL STYLES ****/
+
+    main {
+        width: 95%;
+        max-width: 1000px;
+    }
+    
+    aside, section {
+    justify-content: flex-start;
+    }
+
+    aside {
+        gap: 3rem
+    }
+
+    h1 {
+        font-size: 1.7em;
+        margin-top: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    h2 {
+        font-size: 0.95em;
+        margin-top: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    /**** ASIDE ****/
+
+    .aside-containers {
+    font-size: 0.9em;
+}
+
+    .aside-info-container {
+        width: 90%;
+    }
+
+    #photo-cv {
+        width: 110px;
+    }
+
+    .aside-contact li {
+        gap: 0.4rem;
+        font-size: 0.9em;
+    }
+
+    /**** SECTION ****/
+
+    .section-experience-list {
+    font-size: 0.95em;
+}
+
+}
