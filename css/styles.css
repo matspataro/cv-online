@@ -16,7 +16,7 @@ body {
 main {
     margin: 0 auto;
     display: flex;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 90%;
     justify-content: center;
 }
@@ -24,28 +24,27 @@ main {
 aside, section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
 aside {
-    flex: 1;
     max-width: 30%;
     background-color: var(--aside-blue);
     color: var(--body-background);
+    gap: 2em;
 }
 
 section {
-    flex: 2;
     max-width: 70%;
     background-color: white;
 }
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 h2, h3, h4 {
@@ -54,15 +53,15 @@ h2, h3, h4 {
 }
 
 h2 {
-    font-size: 1em;
-    margin-bottom: 25px;
-    margin-top: 15px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
     color: var(--titles-grey);
 }
 
 h3 {
     border-bottom: 2px solid var(--aside-blue);
-    padding-bottom: 5px;
+    padding-bottom: 0.35rem;
     margin-bottom: 0;
 }
 
@@ -81,11 +80,11 @@ h3 {
 
 .aside-photo {
     display: flex;
-    margin-top: 30px;
+    margin-top: 2rem;
 }
 
 #photo-cv {
-    width: 125px;
+    width: 8rem;
     border: 2px solid var(--body-background);
     border-radius: 8px;
 }
@@ -127,14 +126,13 @@ h3 {
     justify-content: space-around;
     align-items: center;
     background-color: var(--cover-background);
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 1rem;
+    margin-bottom: 0.65rem;
 }
 
 .cover,
 .section-summary,
-.section-experience,
-.section-experience-title {
+.section-experience {
     width: 95%;
 }
 
@@ -151,7 +149,7 @@ h3 {
 }
 
 .section-summary {
-    margin-bottom: 19px;
+    margin-bottom: 1.2rem;
 }
 
 .section-subtitle {
@@ -166,11 +164,12 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .experience-first-title, .experience-date {
     margin-bottom: 0;
-    margin-top: 16px;
+    margin-top: 1rem;
 }
 
 .experience-date {
@@ -208,52 +207,69 @@ h3 {
     }
 
     h1 {
-        font-size: 1.7em;
+        font-size: 1.7rem;
         margin-top: 1.2rem;
         margin-bottom: 0.8rem;
     }
 
     h2 {
-        font-size: 0.95em;
+        font-size: 0.95rem;
         margin-top: 0.8rem;
         margin-bottom: 1.2rem;
     }
 
     h3 {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     h4 {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     p {
-        font-size: 0.95em;
+        font-size: 0.95rem;
     }
 
     /**** ASIDE ****/
 
     .aside-containers {
-    font-size: 0.9em;
-}
+    font-size: 0.9rem;
+    }
 
     .aside-info-container {
         width: 90%;
     }
 
     #photo-cv {
-        width: 110px;
+        width: clamp(7rem, 8vw, 8rem);
     }
 
     .aside-contact li {
         gap: 0.4rem;
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     /**** SECTION ****/
 
     .section-experience-list {
-    font-size: 0.95em;
+    font-size: 0.95rem;
+    }
 }
+
+/***** MEDIA QUERY: <= 768px *****/
+
+@media (max-width: 768px) {
+
+}
+
+/***** MEDIA QUERY: <= 480px *****/
+
+@media (max-width: 480px) { 
+
+}
+
+/***** MEDIA QUERY: <= 375px *****/
+
+@media (max-width: 375px) { 
 
 }
